@@ -21,7 +21,7 @@
 	"homepage": "",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/Vkoslak/torchlight-dat-syntax-vscode"
 	},
 	"galleryBanner": {
 		"color": "#5c2d91",
