@@ -1,0 +1,56 @@
+{
+	"__metadata": {
+		"galleryApiUrl": "",
+		"id": "",
+		"publisherId": "",
+		"publisherDisplayName": "",
+		"date": "10/9/2017"
+	},
+	"name": "tldat",
+	"displayName": "Torchlight DAT support for VS Code",
+	"description": "Syntax highlighter for Torchlight DAT files",
+	"version": "0.1.1",
+	"publisher": "",
+	"categories": [
+		"Languages"
+	],
+	"license": "SEE LICENSE IN LICENSE.md",
+	"bugs": {
+		"url": ""
+	},
+	"homepage": "",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"galleryBanner": {
+		"color": "#5c2d91",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"keywords": [
+		"torchlight"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "tldat",
+				"aliases": [
+                    "torchlight"
+                ],
+                    "extensions": [
+					".dat"
+				]
+            }
+        ],
+		"grammars": [
+			{
+				"language": "tldat",
+				"scopeName": "source.tldat",
+				"path": "./syntaxes/Torchlight-DAT.tmLanguage"
+            }
+        ]
+	}
+}
