@@ -220,6 +220,43 @@
                             </dict>
                         </dict>
                     </dict>
+                    <dict>
+                        <key>match</key>
+                        <string>\s*(&lt;)(TRANSLATE)(&gt;)(\w+)?(:)?(.*)?$</string>
+                        <key>captures</key>
+                        <dict>
+                            <key>1</key>
+                            <dict>
+                                <key>name</key>
+                                <string>punctuation.definition.tag.begin</string>
+                            </dict>
+                            <key>2</key>
+                            <dict>
+                                <key>name</key>
+                                <string>entity.name.type</string>
+                            </dict>
+                            <key>3</key>
+                            <dict>
+                                <key>name</key>
+                                <string>punctuation.definition.tag.end</string>
+                            </dict>
+                            <key>4</key>
+                            <dict>
+                                <key>name</key>
+                                <string>variable.other</string>
+                            </dict>
+                            <key>5</key>
+                            <dict>
+                                <key>name</key>
+                                <string>punctuation.definition.tag</string>
+                            </dict>
+                            <key>6</key>
+                            <dict>
+                                <key>name</key>
+                                <string>string.unquoted</string>
+                            </dict>
+                        </dict>
+                    </dict>
                 </array>
             </dict>
         </array>
