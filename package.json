@@ -49,7 +49,7 @@
 			{
 				"language": "tldat",
 				"scopeName": "source.tldat",
-				"path": "./syntaxes/Torchlight-DAT.tmLanguage"
+				"path": "./syntaxes/Torchlight-DAT.tmLanguage.json"
             }
         ]
 	}

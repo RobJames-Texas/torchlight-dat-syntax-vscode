@@ -1,0 +1,168 @@
+{
+    "fileTypes": [
+        "dat"
+    ],
+    "name": "Torchlight DAT",
+    "patterns": [
+        {
+            "begin": "\\s*(\\[)(AFFIXES|UNIT|TEXTURE_OVERRIDE_LIST|INVENTORY|EQUIPMENT|WARDROBE)(\\])",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin"
+                },
+                "2": {
+                    "name": "entity.name.tag"
+                },
+                "3": {
+                    "name": "punctuation.definition.tag.end"
+                }
+            },
+            "end": "\\s*(\\[\\\/)(AFFIXES|UNIT|TEXTURE_OVERRIDE_LIST|INVENTORY|EQUIPMENT|WARDROBE)(\\])",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.tag.begin"
+                },
+                "2": {
+                    "name": "entity.name.tag"
+                },
+                "3": {
+                    "name": "punctuation.definition.tag.end"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "$self"
+                },
+                {
+                    "match": "\\s*(<)(STRING)(>)(AFFIX|GAMBLER_ICON|ATTACK_SOUND|STRIKE_SOUND|LAND_SOUND|TAKE_SOUND|FALL_SOUND|BASEFILE|CREATEAS|UNITTYPE|NAME|RESOURCEDIRECTORY|MESHFILE|ICONLIT|ICONSELECTED|STRIKE_SOUND|IDLE_SOUND|ROAR_SOUND|MISS_SOUND|STEP_SOUND|PARTICLE_GETHIT|UNIT_GUID|ARMOR_GRAPH|DAMAGE_GRAPH|HEALTH_GRAPH|ATTACK_SOUND|INJURE_SOUND|PARTICLE_TELEPORT|PARTICLE_DESUMMON|CONTAINER|ATTACHEDLAYOUT|SET|RACE|GENDER|MESH|ICON)?(\\w+)?(:)?(.+)?$",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.tag.begin"
+                        },
+                        "2": {
+                            "name": "entity.name.type"
+                        },
+                        "3": {
+                            "name": "punctuation.definition.tag.end"
+                        },
+                        "4": {
+                            "name": "variable.other"
+                        },
+                        "5": {
+                            "name": "invalid"
+                        },
+                        "6": {
+                            "name": "punctuation.definition.tag"
+                        },
+                        "7": {
+                            "name": "string.unquoted"
+                        }
+                    }
+                },
+                {
+                    "match": "\\s*(<)(FLOAT)(>)(SCALE|MINHP|WALKINGSPEED|RUNNINGSPEED|ATTACKSPEED|REACH_BONUS|MAXHP|DAMAGE_REACT_RADIUS|WALK_ANIM_MULT|RUN_ANIM_MULT|RANGE|STRIKERANGE|DEVIATION_FROM_30FPS|WEAPONARC|SECONDARY_DMG_PCT)?(:)?(\\d+\\.?\\d*)?([^0-9.]+.*)?$",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.tag.begin"
+                        },
+                        "2": {
+                            "name": "entity.name.type"
+                        },
+                        "3": {
+                            "name": "punctuation.definition.tag.end"
+                        },
+                        "4": {
+                            "name": "variable.other"
+                        },
+                        "5": {
+                            "name": "punctuation.definition.tag"
+                        },
+                        "6": {
+                            "name": "constant.numeric"
+                        },
+                        "7": {
+                            "name": "invalid"
+                        }
+                    }
+                },
+                {
+                    "match": "\\s*(<)(INTEGER)(>)(\\w+)?(:)?(\\d+)?(\\D+.*)?$",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.tag.begin"
+                        },
+                        "2": {
+                            "name": "entity.name.type"
+                        },
+                        "3": {
+                            "name": "punctuation.definition.tag.end"
+                        },
+                        "4": {
+                            "name": "variable.other"
+                        },
+                        "5": {
+                            "name": "punctuation.definition.tag"
+                        },
+                        "6": {
+                            "name": "constant.numeric"
+                        },
+                        "7": {
+                            "name": "invalid"
+                        }
+                    }
+                },
+                {
+                    "match": "\\s*(<)(BOOL)(>)(\\w+)?(:)?(true|false)?(.*)?$",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.tag.begin"
+                        },
+                        "2": {
+                            "name": "entity.name.type"
+                        },
+                        "3": {
+                            "name": "punctuation.definition.tag.end"
+                        },
+                        "4": {
+                            "name": "variable.other"
+                        },
+                        "5": {
+                            "name": "punctuation.definition.tag"
+                        },
+                        "6": {
+                            "name": "constant.language"
+                        },
+                        "7": {
+                            "name": "invalid"
+                        }
+                    }
+                },
+                {
+                    "match": "\\s*(<)(TRANSLATE)(>)(\\w+)?(:)?(.*)?$",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.tag.begin"
+                        },
+                        "2": {
+                            "name": "entity.name.type"
+                        },
+                        "3": {
+                            "name": "punctuation.definition.tag.end"
+                        },
+                        "4": {
+                            "name": "variable.other"
+                        },
+                        "5": {
+                            "name": "punctuation.definition.tag"
+                        },
+                        "6": {
+                            "name": "string.unquoted"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "scopeName": "source.tldat",
+    "uuid": "DAD2D1A1-1460-4F3A-9B03-C25E4EA85E5B"
+}
